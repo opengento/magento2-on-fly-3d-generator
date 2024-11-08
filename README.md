@@ -1,1 +1,1 @@
-# magento2-on-fly-3d-generator
+# on-fly-3d-generator-magento2
