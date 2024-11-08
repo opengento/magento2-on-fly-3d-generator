@@ -1,0 +1,21 @@
+{
+  "name": "opengento/module-on-fly3d",
+  "version": "1.0.0",
+  "description": "N/A",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*",
+    "magento/module-catalog": "104.0.*"
+  },
+  "license": [
+    "Open Software License (OSL)"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Opengento\\OnFly3d\\": ""
+    }
+  }
+}
