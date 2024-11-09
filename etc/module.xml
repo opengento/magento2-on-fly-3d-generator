@@ -4,6 +4,7 @@
     <module name="Opengento_OnFly3d">
         <sequence>
             <module name="Magento_Catalog"/>
+            <module name="Magento_ProductVideo" />
         </sequence>
     </module>
 </config>
