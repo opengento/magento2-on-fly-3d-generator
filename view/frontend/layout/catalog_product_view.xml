@@ -2,6 +2,9 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="product.info">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Opengento_OnFly3d::product-info.phtml</argument>
+            </action>
             <block class="Opengento\OnFly3d\Block\ViewerGlb" name="product.infos.render3d" template="Opengento_OnFly3d::onfly.phtml"/>
         </referenceBlock>
     </body>
