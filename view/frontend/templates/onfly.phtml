@@ -1,0 +1,26 @@
+<?php
+//WIP
+declare(strict_types=1);
+
+use Magento\Catalog\Block\Product\View;
+
+/** @var View $block */
+/** @var $escaper */
+?>
+
+<div x-data="{ open: false }">
+    <!-- Trigger button -->
+    <button @click="open = true" class="btn btn-primary"><?= $escaper->escapeHtml(__('Show 3D view')) ?></button>
+
+    <!-- Modal -->
+    <div x-show="open" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-75">
+        <div class="p-4 bg-white rounded shadow-lg">
+            <h2 class="mb-4 text-xl font-bold"><?= $escaper->escapeHtml(__('The 3d view')) ?></h2>
+            <model-viewer alt=""
+                          src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" ar
+                          shadow-intensity="1"
+                          camera-controls touch-action="pan-y" style="width: 500px; height:500px; display:block;"></model-viewer>
+            <button @click="open = false" class="btn btn-secondary">Close</button>
+        </div>
+    </div>
+</div>
