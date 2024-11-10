@@ -164,6 +164,36 @@ $elementToggleCode = $element->getToggleCode() ? $element->getToggleCode():
                         </button>
                     </div>
                     <div class="draggable-handle"></div>
+                    <a href="#" type="button" style="position: absolute; right: 0; bottom: 0; z-index: 99;" onClick="(function(e){
+                        // const image_url = '<%- data.url %>';
+                        const image_url = 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/bb031375-73f7-4521-9a8d-d46b83332188/W+AIR+FORCE+1+%2707+NEXT+NATURE.png';
+                        fetch('http://localhost:3000/api/sendImage', {
+                            method: 'POST',
+                            body: JSON.stringify({ image_url: image_url })
+                        })
+                        .then((response) => response.json())
+                        .then((data) => {
+                            if (data.result) {
+                                const imageData = {
+                                    form_key: '<?= $block->getFormKey() ?>',
+                                    //image_id: data.result,
+                                    image_id: '019312f9-71d9-78f9-b590-c9051381707f',
+                                    product_sku: '<%- data.sku %>'
+                                };
+                                const queryString = new URLSearchParams(imageData).toString();
+                                fetch('<?= $block->getUrl('opengento_image_generator/image/generate') ?>?isAjax=true&' + queryString, {
+                                    method: 'GET',
+                                    headers: {
+                                        'X-Requested-With': 'XMLHttpRequest'
+                                    }
+                            });
+                            }
+                        });
+
+                        e.stopPropagation();
+                    })(arguments[0])">
+                        <?= $block->escapeHtml(__('3D')) ?>
+                    </a>
                 </div>
                 <div class="image-fade"><span><?= $block->escapeHtml(__('Hidden')); ?></span></div>
             </div>
@@ -238,13 +268,6 @@ $elementToggleCode = $element->getToggleCode() ? $element->getToggleCode():
                                 </li>
                             <?php endforeach; ?>
                         </ul>
-                        <button onClick="(function(){
-                                const url = '<%- data.url %>';
-                                alert('Hey i am calling');
-                                alert(url);
-                                return false;
-                            })();">click
-                        </button>
                     </div>
                 </div>
 

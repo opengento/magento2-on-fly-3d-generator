@@ -2,4 +2,4 @@
 
 use Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Opengento_OnFly3d', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Opengento_ImageGenerator', __DIR__);

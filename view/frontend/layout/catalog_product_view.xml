@@ -3,9 +3,9 @@
     <body>
         <referenceBlock name="product.info">
             <action method="setTemplate">
-                <argument name="template" xsi:type="string">Opengento_OnFly3d::product-info.phtml</argument>
+                <argument name="template" xsi:type="string">Opengento_ImageGenerator::product-info.phtml</argument>
             </action>
-            <block class="Opengento\OnFly3d\Block\ViewerGlb" name="product.infos.render3d" template="Opengento_OnFly3d::onfly.phtml"/>
+            <block class="Opengento\ImageGenerator\Block\ViewerGlb" name="product.infos.render3d" template="Opengento_ImageGenerator::onfly.phtml"/>
         </referenceBlock>
     </body>
 </page>

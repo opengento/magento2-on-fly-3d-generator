@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Communication/etc/communication.xsd">
+    <topic name="opengento.image.retrieve" response="boolean" request="Opengento\ImageGenerator\Api\Data\ImageInterface">
+        <handler name="OpengentoImageGeneratorHandler" type="Opengento\ImageGenerator\Model\Image\RetrieveConsumer" method="processMessage"/>
+    </topic>
+</config>

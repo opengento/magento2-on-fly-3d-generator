@@ -1,6 +1,6 @@
 <?php
 
-namespace Opengento\OnFly3d\Block;
+namespace Opengento\ImageGenerator\Block;
 
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\Filesystem;

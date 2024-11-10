@@ -15,7 +15,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "Opengento\\OnFly3d\\": ""
+      "Opengento\\ImageGenerator\\": ""
     }
   }
 }
