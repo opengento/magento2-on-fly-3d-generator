@@ -13,9 +13,11 @@ $fileGlb = $block->getGlbFileUrl();
             <div class="p-4 bg-white rounded shadow-lg">
                 <h2 class="mb-4 text-xl font-bold"><?= $escaper->escapeHtml(__('The 3d view')) ?></h2>
                 <model-viewer
-                    src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" ar
+                    src="<?= $fileGlb ?>" ar
+                    ios-src="<?= str_replace('.glb', '.usdz', $fileGlb); ?>"
                     shadow-intensity="1"
-                    camera-controls touch-action="pan-y" style="width: 500px; height:500px; display:block;"></model-viewer>
+                    xr-environnement
+                    camera-controls touch-action="pan-y" style="width: 350px; height:350px; display:block;"></model-viewer>
                 <button @click="open = false" class="btn btn-secondary">Close</button>
             </div>
         </div>
